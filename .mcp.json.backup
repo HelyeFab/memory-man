@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "memory-man": {
+      "type": "stdio",
+      "command": "/home/beano/DevProjects/python/MCP_SERVERS/memory-man/venv/bin/python",
+      "args": ["-m", "memory_man"],
+      "env": {
+        "PYTHONPATH": "/home/beano/DevProjects/python/MCP_SERVERS/memory-man/src"
+      }
+    }
+  }
+}

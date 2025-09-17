@@ -1,0 +1,25 @@
+[project]
+name = "memory-man"
+version = "0.1.0"
+description = "MCP server for persistent memory across Claude Code sessions"
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+select = ["E", "F", "I", "N", "W", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = "test_*.py"
