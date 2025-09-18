@@ -17,10 +17,12 @@ class Settings(BaseSettings):
     )
     
     # Database settings
-    database_url: str = "sqlite+aiosqlite:///./data/memories.db"
-    
+    # Use absolute path for centralized database storage
+    # The actual database is in the repository, with a symlink from .claude
+    database_url: str = "sqlite+aiosqlite:////home/beano/.claude/memory_man.db"
+
     # Storage paths
-    data_dir: Path = Path("./data")
+    data_dir: Path = Path("/home/beano/.claude/memory_man_data")
     
     # Memory settings
     max_memory_size: int = 10000  # Max characters per memory
