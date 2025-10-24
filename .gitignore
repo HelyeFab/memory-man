@@ -10,12 +10,12 @@ ENV/
 .venv
 
 # Database
-# Note: Database is NOT gitignored - it needs to sync across machines
-# The centralized database is stored at /home/beano/.claude/memory_man.db
-# data/
-# *.db
-# *.sqlite
-# *.sqlite3
+# Note: The centralized database is stored at /home/beano/.claude/memory_man.db
+# Database files should never be committed - use migrations for schema sync
+data/
+*.db
+*.sqlite
+*.sqlite3
 
 # IDE
 .vscode/
