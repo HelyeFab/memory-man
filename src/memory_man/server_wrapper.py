@@ -85,8 +85,9 @@ async def run_server():
                 arguments = params.get("arguments", {})
                 
                 try:
-                    # Call the tool through the app
-                    result = await app.call_tool(tool_name, arguments)
+                    # Import and call the tool handler directly
+                    from memory_man.server import call_tool
+                    result = await call_tool(tool_name, arguments)
                     
                     # Format the response
                     content = []
