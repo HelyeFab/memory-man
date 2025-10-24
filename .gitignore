@@ -12,10 +12,13 @@ ENV/
 # Database
 # Note: The centralized database is stored at /home/beano/.claude/memory_man.db
 # Database files should never be committed - use migrations for schema sync
+# EXCEPT: Sanitized exports in exports/ directory are tracked for cross-machine sync
 data/
 *.db
 *.sqlite
 *.sqlite3
+!exports/
+memory_man.db.*.backup
 
 # IDE
 .vscode/
